@@ -87,11 +87,14 @@
                 <i data-lucide="calendar" class="w-4 h-4 mr-2 text-yellow-300"></i>
                 일시 및 장소: 2026. 10. 29.(목) 점심시간 12:55~13:50 , 2층 음악실~미술실 앞
               </p>
-              <p class="text-emerald-200 leading-relaxed">
-                <i data-lucide="sparkles" class="w-4 h-4 inline mr-1 text-yellow-300"></i>
-                만들기 외에도 나의 혈압 확인, 올바른 손씻기 확인, 의료 VR체험 가능! (만들기는 퀴즈와 포스트잇만 해도 참여 가능!)<br>
-                / 만들기 외에 추가 체험 시에는 간식 제공
-              </p>
+              <div class="text-emerald-200 leading-relaxed space-y-1">
+                <p class="font-bold text-yellow-100">
+                  <i data-lucide="sparkles" class="w-4 h-4 inline mr-1 text-yellow-300"></i>
+                  만들기 외에도 의료체험 부스 운영
+                </p>
+                <p>나의 혈압 측정, 올바른 손씻기 체험, 의료 VR 체험 실시!</p>
+                <p class="text-xs text-yellow-200/90">(만들기는 퀴즈와 포스트잇만 해도 참여 가능!, 만들기 외에 추가 체험 시에는 간식 제공)</p>
+              </div>
             </div>
           </div>
         </div>
@@ -145,6 +148,19 @@
             <i data-lucide="arrow-right" class="w-5 h-5"></i>
           </button>
         </form>
+      </div>
+
+      <!-- 안내1 이미지 파일 영역 -->
+      <div class="max-w-md mx-auto bg-white p-4 rounded-2xl shadow-sm border border-emerald-100 text-center space-y-2">
+        <h4 class="text-xs font-bold text-gray-500 flex items-center justify-center space-x-1">
+          <i data-lucide="image" class="w-4 h-4 text-emerald-600"></i>
+          <span>행사 안내 포스터 / 카드뉴스</span>
+        </h4>
+        <div class="rounded-xl overflow-hidden bg-slate-50 border border-slate-200 flex items-center justify-center">
+          <img src="./안내1.png" alt="행사 안내 이미지" 
+               onerror="this.onerror=null; this.src='data:image/svg+xml;charset=UTF-8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22><rect width=%22100%%22 height=%22100%%22 fill=%22%23f8fafc%22/><text x=%2250%%22 y=%2250%%22 fill=%22%2394a3b8%22 font-size=%2213%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>안내1.png 이미지 파일을 업로드해주세요</text></svg>';" 
+               class="w-full h-auto object-contain max-h-[400px]">
+        </div>
       </div>
 
     </section>
@@ -916,7 +932,7 @@
         textInput.value = userPostit.text;
       } else {
         alertBox.className = "p-3 rounded-xl text-xs font-bold bg-amber-50 text-amber-800 border border-amber-300";
-        alertBox.innerHTML = `⏳ 제출하신 포스트잇이 <b>[승인 대기 중]</b>입니다. 승인되기 전까지는 아래 입력창에서 언제든지 내용을 수정하고 <b>[수정하기]</b>를 누할 수 있습니다!`;
+        alertBox.innerHTML = `⏳ 제출하신 포스트잇이 <b>[승인 대기 중]</b>입니다. 승인되기 전까지는 아래 입력창에서 언제든지 내용을 수정하고 <b>[수정하기]</b>를 누를 수 있습니다!`;
         submitBtnText.innerText = "수정하기";
         document.getElementById('postitSubmitBtn').disabled = false;
         textInput.disabled = false;
